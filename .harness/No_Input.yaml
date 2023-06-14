@@ -50,3 +50,4 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+  allowStageExecutions: true
