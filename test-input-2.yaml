@@ -1,0 +1,18 @@
+inputSet:
+  name: test-input-2
+  identifier: testinput2
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Pipeline_Input_Field_Update_Remote
+    stages:
+      - stage:
+          identifier: S2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 5m
