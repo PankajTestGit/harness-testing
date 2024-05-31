@@ -1,0 +1,21 @@
+template:
+  name: old-git-sync-shell-step
+  identifier: oldgitsyncshellstep
+  versionLabel: V1
+  type: Step
+  projectIdentifier: Pankaj_Git_Sync
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: <+input>
+      environmentVariables: []
+      outputVariables: []
