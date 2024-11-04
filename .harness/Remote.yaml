@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo "Stage 1"
+                        script: echo "Main Patch 2 Stage 1"
                     environmentVariables: []
                     outputVariables: []
                   timeout: <+input>
