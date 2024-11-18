@@ -156,4 +156,9 @@ service:
           description: Test
           required: true
           value: <+input>
+        - name: Num1
+          type: Number
+          description: Test Num
+          required: true
+          value: <+input>
     type: Kubernetes
