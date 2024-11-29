@@ -7,7 +7,7 @@ pipeline:
   stages:
     - stage:
         name: S1
-        identifier: S1
+      identifier: S1
         description: ""
         type: Custom
         spec:
@@ -26,7 +26,7 @@ pipeline:
                         script: Echo Stage 1
                     environmentVariables: []
                     outputVariables: []
-                timeout: <+input>
+                 timeout: <+input>
     - stage:
         name: S2
         identifier: S2
