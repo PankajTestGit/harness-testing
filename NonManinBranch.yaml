@@ -70,7 +70,7 @@ pipeline:
                         script: Echo Stage 3
                     environmentVariables: []
                     outputVariables: []
-                  timeout: 10m
+                  timeout: <+input>
     - stage:
         name: S4
         identifier: S4
