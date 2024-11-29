@@ -26,7 +26,6 @@ pipeline:
                         script: Echo Stage 1
                     environmentVariables: []
                     outputVariables: []
-                  timeout: 10m
     - stage:
         name: S2
         identifier: S2
