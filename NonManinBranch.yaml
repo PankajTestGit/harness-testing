@@ -7,6 +7,7 @@ pipeline:
   stages:
     - stage:
         name: S1
+        identifier: S1_1
         description: ""
         type: Custom
         spec:
