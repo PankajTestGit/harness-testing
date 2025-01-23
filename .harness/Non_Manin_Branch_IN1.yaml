@@ -1,0 +1,18 @@
+inputSet:
+  name: Non Main Branch IN1
+  identifier: Non_Main_Branch_IN1
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Non_Manin_Branch
+    stages:
+      - stage:
+          identifier: S2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 5m
