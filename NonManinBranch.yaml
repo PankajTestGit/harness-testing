@@ -71,10 +71,4 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
-    - stage:
-        name: S4
-        identifier: S4
-        template:
-          templateRef: Shell_Script_Template
-          versionLabel: V1
   allowStageExecutions: true
