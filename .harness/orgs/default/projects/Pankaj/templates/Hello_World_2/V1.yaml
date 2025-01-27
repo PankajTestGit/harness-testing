@@ -1,0 +1,19 @@
+template:
+  name: Hello World 2
+  identifier: Hello_World_2
+  versionLabel: V1
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: echo Hello World from Harness
+      environmentVariables: []
+      outputVariables: []
