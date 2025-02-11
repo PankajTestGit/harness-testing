@@ -1,6 +1,6 @@
 pipeline:
   name: Shell Remote
-  identifier: Shell_Remote
+  identifier: ShellRemote
   projectIdentifier: Pankaj
   orgIdentifier: default
   tags: {}
