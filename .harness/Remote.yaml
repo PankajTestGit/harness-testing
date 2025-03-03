@@ -83,4 +83,31 @@ pipeline:
           templateRef: Shell_S4
           versionLabel: V1
           gitBranch: main
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: TerraformRollback_1
+                      type: TerraformRollback
+                      spec:
+                        provisionerIdentifier: <+input>
+                        delegateSelectors: <+input>
+                  - stepGroup:
+                      identifier: S2
+                      steps:
+                        - parallel:
+                            - step:
+                                identifier: TerraformRollback_2
+                                type: TerraformRollback
+                                spec:
+                                  provisionerIdentifier: <+input>
+                                  delegateSelectors: <+input>
+                            - step:
+                                identifier: TerraformRollback_3
+                                type: TerraformRollback
+                                spec:
+                                  provisionerIdentifier: <+input>
+                      delegateSelectors: <+input>
   allowStageExecutions: true
