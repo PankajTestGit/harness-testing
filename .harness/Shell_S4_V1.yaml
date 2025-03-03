@@ -22,5 +22,39 @@ template:
                 environmentVariables: []
                 outputVariables: []
               timeout: 10m
+          - step:
+              type: TerraformRollback
+              name: TerraformRollback_1
+              identifier: TerraformRollback_1
+              spec:
+                provisionerIdentifier: <+input>
+                delegateSelectors: <+input>
+                skipRefreshCommand: false
+              timeout: 10m
+          - stepGroup:
+              name: S2
+              identifier: S2
+              steps:
+                - parallel:
+                    - step:
+                        type: TerraformRollback
+                        name: TerraformRollback_2
+                        identifier: TerraformRollback_2
+                        spec:
+                          provisionerIdentifier: <+input>
+                          delegateSelectors: <+input>
+                          skipRefreshCommand: false
+                        timeout: 10m
+                    - step:
+                        type: TerraformRollback
+                        name: TerraformRollback_3
+                        identifier: TerraformRollback_3
+                        spec:
+                          provisionerIdentifier: <+input>
+                          delegateSelectors:
+                            - kubernetes-delegate-idp
+                          skipRefreshCommand: false
+                        timeout: 10m
+              delegateSelectors: <+input>
   identifier: Shell_S4
   versionLabel: V1
