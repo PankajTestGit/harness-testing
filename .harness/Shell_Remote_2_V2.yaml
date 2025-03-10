@@ -1,0 +1,21 @@
+template:
+  name: Shell Remote 2
+  identifier: Shell_Remote_2
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hello!
+      environmentVariables: []
+      outputVariables: []
+  versionLabel: V2
