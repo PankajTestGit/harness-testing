@@ -1,0 +1,21 @@
+template:
+  name: New Shell Remote 2
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hello World!
+      environmentVariables: []
+      outputVariables: []
+  identifier: New_Shell_Remote_2
+  versionLabel: V1
