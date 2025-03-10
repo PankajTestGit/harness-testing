@@ -1,0 +1,28 @@
+pipeline:
+  name: Shell Test YAML
+  identifier: Shell_Test_YAML
+  projectIdentifier: DoNotDelete
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: S1
+                  identifier: S1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo Hello
+                    environmentVariables: []
+                    outputVariables: []
+                    timeout: <+input>
