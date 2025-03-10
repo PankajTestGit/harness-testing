@@ -1,0 +1,21 @@
+template:
+  name: Shell Remote Test Template
+  identifier: Shell_Remote_Test_Template
+  versionLabel: V1
+  type: Step
+  projectIdentifier: DoNotDelete
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hello
+      environmentVariables: []
+      outputVariables: []
