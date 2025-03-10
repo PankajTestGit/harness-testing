@@ -1,7 +1,8 @@
 pipeline:
   projectIdentifier: Pankaj
   orgIdentifier: default
-  tags: {}
+  tags:
+    Test: ""
   stages:
     - stage:
         name: S1
@@ -21,10 +22,11 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo Hello Word
+                        script: echo Hello!
                     environmentVariables: []
                     outputVariables: []
                   timeout: <+input>
         tags: {}
   identifier: Shell_Test_Remote_Clone
   name: Shell Test Remote - Clone
+  description: Test Pipeline
