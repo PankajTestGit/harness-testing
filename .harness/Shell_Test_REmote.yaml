@@ -1,5 +1,5 @@
 pipeline:
-  name: Shell Test REmote
+  name: Shell Test Remote
   identifier: Shell_Test_REmote
   projectIdentifier: DoNotDelete
   orgIdentifier: default
