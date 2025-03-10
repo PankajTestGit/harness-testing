@@ -1,0 +1,19 @@
+inputSet:
+  name: IN1
+  identifier: IN1
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete
+  pipeline:
+    identifier: Shell_Test_YAML
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: S1
+                    type: ShellScript
+                    spec:
+                      timeout: <+input>
