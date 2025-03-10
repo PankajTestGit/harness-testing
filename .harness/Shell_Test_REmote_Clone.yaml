@@ -1,0 +1,30 @@
+pipeline:
+  projectIdentifier: DoNotDelete
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo Hello World
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: <+input>
+        tags: {}
+  identifier: Shell_Test_REmote_Clone
+  name: Shell Test Remote - Clone
