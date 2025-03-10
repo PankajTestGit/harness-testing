@@ -1,5 +1,6 @@
 inputSet:
   name: IN1
+  tags: {}
   identifier: IN1
   orgIdentifier: default
   projectIdentifier: DoNotDelete
@@ -16,4 +17,4 @@ inputSet:
                     identifier: S1
                     type: ShellScript
                     spec:
-                      timeout: <+input>
+                      timeout: 5m
