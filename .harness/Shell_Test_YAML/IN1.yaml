@@ -14,7 +14,6 @@ inputSet:
             execution:
               steps:
                 - step:
-                    identifier: S1
+                    identifier: ShellScript_1
                     type: ShellScript
-                    spec:
-                      timeout: 5m
+                    timeout: 5m
