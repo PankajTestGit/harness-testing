@@ -34,6 +34,12 @@ template:
                       outputVariables: []
                     timeout: <+input>
           tags: {}
+          variables:
+            - name: S1_Str1
+              type: String
+              description: ""
+              required: false
+              value: <+input>
     variables:
       - name: Str1
         type: String
