@@ -1,0 +1,47 @@
+template:
+  name: Pipeline Shell
+  identifier: Pipeline_Shell
+  versionLabel: V1
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: |-
+                            echo Hello
+                            echo Num1: <+pipeline.variables.Num1>
+                            echo Str1: <+pipeline.variables.Str1>>
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: <+input>
+          tags: {}
+    variables:
+      - name: Str1
+        type: String
+        description: ""
+        required: false
+        value: <+input>.default(a)
+      - name: Num1
+        type: Number
+        description: ""
+        required: false
+        value: <+input>.default(1)
