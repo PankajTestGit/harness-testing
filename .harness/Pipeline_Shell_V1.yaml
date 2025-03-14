@@ -37,9 +37,10 @@ template:
           variables:
             - name: S1_Str1
               type: String
+              default: b
               description: ""
               required: false
-              value: <+input>
+              value: <+input>.default(b)
     variables:
       - name: Str1
         type: String
