@@ -17,6 +17,11 @@ pipeline:
                       identifier: ShellScript_1
                       type: ShellScript
                       timeout: <+input>
+            variables:
+              - name: S1_Str1
+                type: String
+                default: b
+                value: <+input>.default(b)
       variables:
         - name: Str1
           type: String
