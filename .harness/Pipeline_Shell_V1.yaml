@@ -47,6 +47,11 @@ template:
         description: ""
         required: false
         value: <+input>.default(a)
+      - name: Str2
+        type: String
+        description: ""
+        required: false
+        value: <+input>.default(b)
       - name: Num1
         type: Number
         description: ""
