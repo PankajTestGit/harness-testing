@@ -1,0 +1,36 @@
+pipeline:
+  name: Pipeline Shell 2
+  identifier: Pipeline_Shell_2
+  tags: {}
+  template:
+    templateRef: Pipeline_Shell
+    versionLabel: V1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: S1
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      timeout: <+input>
+            variables:
+              - name: S1_Str1
+                type: String
+                default: b
+                value: <+input>.default(b)
+      variables:
+        - name: Str1
+          type: String
+          value: <+input>.default(a)
+        - name: Num1
+          type: Number
+          value: <+input>.default(1)
+        - name: Dtr2
+          type: String
+          value: <+input>.default(b)
+  projectIdentifier: Pankaj
+  orgIdentifier: default
