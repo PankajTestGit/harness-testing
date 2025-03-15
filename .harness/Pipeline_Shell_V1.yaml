@@ -52,13 +52,3 @@ template:
         description: ""
         required: false
         value: <+input>.default(1)
-      - name: Dtr2
-        type: String
-        description: ""
-        required: false
-        value: <+input>.default(b)
-      - name: Num2
-        type: String
-        description: ""
-        required: false
-        value: <+input>.default(2)
