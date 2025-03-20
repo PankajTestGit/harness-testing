@@ -1,7 +1,7 @@
 pipeline:
   name: Shell Test Remote
-  identifier: Shell_Test_Remote
-  projectIdentifier: Pankaj
+  identifier: Shell_Test_REmote
+  projectIdentifier: DoNotDelete
   orgIdentifier: default
   tags: {}
   stages:
@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo Hello Word
+                        script: echo Hello World
                     environmentVariables: []
                     outputVariables: []
                   timeout: <+input>
