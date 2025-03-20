@@ -1,6 +1,6 @@
 pipeline:
-  name: Remote
-  identifier: Remote
+  name: Remote 1
+  identifier: Remote_1
   projectIdentifier: Pankaj
   orgIdentifier: default
   tags: {}
