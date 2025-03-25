@@ -1,0 +1,10 @@
+overlayInputSet:
+  name: IN1 And IN2
+  identifier: IN1_And_IN2
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipelineIdentifier: Auto_Path_Creation
+  inputSetReferences:
+    - IN1
+    - IN2
+  tags: {}
