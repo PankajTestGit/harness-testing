@@ -1,0 +1,30 @@
+pipeline:
+  name: Long Pipeline Name to Test for Git Details Tooltip overflow
+  identifier: Long_Pipeline_Name_to_Test_for_Git_Details_Tooltip_overflow
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo Hello
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: <+input>
+        tags: {}
