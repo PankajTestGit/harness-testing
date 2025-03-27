@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: Test Infra
+  identifier: Test_Infra
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  environmentRef: Test_Env
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: <+input>
+    namespace: <+input>
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
