@@ -1,0 +1,5 @@
+service:
+  name: Test Svc
+  identifier: Test_Svc
+  orgIdentifier: default
+  projectIdentifier: Pankaj
