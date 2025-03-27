@@ -1,0 +1,37 @@
+inputSet:
+  pipeline:
+    identifier: Oauth_Testing
+    template:
+      templateInputs:
+        stages:
+          - stage:
+              identifier: S1
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: ShellScript_1
+                        type: ShellScript
+                        timeout: 5m
+          - stage:
+              identifier: S2
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: ShellScript_1
+                        type: ShellScript
+                        timeout: 10m
+        variables:
+          - name: S1
+            type: String
+            value: S1
+          - name: S2
+            type: String
+            value: S2
+  name: IN2
+  identifier: IN2
+  orgIdentifier: default
+  projectIdentifier: Pankaj
