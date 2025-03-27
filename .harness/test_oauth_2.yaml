@@ -1,0 +1,23 @@
+pipeline:
+  name: test oauth 2
+  identifier: test_oauth_2
+  tags: {}
+  template:
+    templateRef: Shell_Pipeline
+    versionLabel: V1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: S1
+            template:
+              templateInputs:
+                type: Custom
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: ShellScript_1
+                          type: ShellScript
+                          timeout: <+input>
+  projectIdentifier: Pankaj
+  orgIdentifier: default
