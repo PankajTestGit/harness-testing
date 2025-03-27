@@ -1,0 +1,5 @@
+service:
+  name: Oauth Test Svc
+  identifier: Oauth_Test_Svc
+  orgIdentifier: default
+  projectIdentifier: Pankaj
