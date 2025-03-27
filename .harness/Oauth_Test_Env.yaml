@@ -1,6 +1,7 @@
 environment:
-  name: Oauth Test Env
+  name: Oauth Test Env 2
   identifier: Oauth_Test_Env
+  tags: {}
+  type: PreProduction
   orgIdentifier: default
   projectIdentifier: Pankaj
-  type: PreProduction
