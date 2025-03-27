@@ -4,7 +4,6 @@ pipeline:
   tags: {}
   template:
     templateRef: Selective_Stage_Execution
-    versionLabel: V1
     templateInputs:
       stages:
         - stage:
