@@ -1,5 +1,5 @@
 infrastructureDefinition:
-  name: Oauth test 2
+  name: Oauth test
   identifier: Oauth_test_2
   orgIdentifier: default
   projectIdentifier: Pankaj
