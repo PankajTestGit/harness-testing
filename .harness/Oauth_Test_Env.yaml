@@ -1,0 +1,6 @@
+environment:
+  name: Oauth Test Env
+  identifier: Oauth_Test_Env
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  type: PreProduction
