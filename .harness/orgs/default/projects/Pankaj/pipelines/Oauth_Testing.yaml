@@ -1,0 +1,38 @@
+pipeline:
+  name: Oauth Testing
+  identifier: Oauth_Testing
+  tags: {}
+  template:
+    templateRef: Selective_Stage_Execution
+    versionLabel: V1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: S1
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      timeout: <+input>
+        - stage:
+            identifier: S2
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      timeout: <+input>
+      variables:
+        - name: S1
+          type: String
+          value: <+input>.default(S1)
+        - name: S2
+          type: String
+          value: <+input>.default(S2)
+  projectIdentifier: Pankaj
+  orgIdentifier: default
