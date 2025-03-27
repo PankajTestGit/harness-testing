@@ -3,3 +3,6 @@ service:
   identifier: Oauth_Test_Svc
   orgIdentifier: default
   projectIdentifier: Pankaj
+  serviceDefinition:
+    spec: {}
+    type: Kubernetes
