@@ -1,0 +1,20 @@
+template:
+  name: Step Shell Template
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  spec:
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      source:
+        type: Inline
+        spec:
+          script: echo Hello World
+      environmentVariables: []
+      outputVariables: []
+      delegateSelectors: []
+    timeout: <+input>
+  identifier: Step_Shell_Template
+  versionLabel: V1
