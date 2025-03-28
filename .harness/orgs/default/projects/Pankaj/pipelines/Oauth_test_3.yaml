@@ -18,6 +18,6 @@ pipeline:
                       - step:
                           identifier: ShellScript_1
                           type: ShellScript
-                          timeout: <+input>
+                          timeout: 5m
   projectIdentifier: Pankaj
   orgIdentifier: default
