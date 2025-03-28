@@ -23,5 +23,7 @@ template:
                   steps:
                     - step:
                         identifier: ShellScript_1
-                        type: ShellScript
-                        timeout: <+input>
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
