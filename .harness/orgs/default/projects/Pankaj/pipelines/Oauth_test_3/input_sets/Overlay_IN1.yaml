@@ -1,0 +1,10 @@
+overlayInputSet:
+  name: Overlay IN1
+  identifier: Overlay_IN1
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipelineIdentifier: Oauth_test_3
+  inputSetReferences:
+    - IN1
+    - IN2
+  tags: {}
