@@ -20,6 +20,6 @@ pipeline:
                           template:
                             templateInputs:
                               type: ShellScript
-                              timeout: 5m
+                              timeout: 10m
   projectIdentifier: Pankaj
   orgIdentifier: default
