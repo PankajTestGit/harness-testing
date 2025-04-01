@@ -1,0 +1,21 @@
+template:
+  name: Shell Stage Template
+  type: Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: ShellScript_1
+              identifier: ShellScript_1
+              template:
+                templateRef: Step_Shell_Template
+                versionLabel: V2
+                templateInputs:
+                  type: ShellScript
+                  timeout: <+input>
+  identifier: Shell_Stage_Template
+  versionLabel: V2
