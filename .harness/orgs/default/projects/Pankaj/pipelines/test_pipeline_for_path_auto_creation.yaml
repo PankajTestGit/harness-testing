@@ -1,0 +1,25 @@
+pipeline:
+  name: test pipeline for path auto creation
+  identifier: test_pipeline_for_path_auto_creation
+  tags: {}
+  template:
+    templateRef: Shell_Pipeline
+    versionLabel: V1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: S1
+            template:
+              templateInputs:
+                type: Custom
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: ShellScript_1
+                          template:
+                            templateInputs:
+                              type: ShellScript
+                              timeout: <+input>
+  projectIdentifier: Pankaj
+  orgIdentifier: default
