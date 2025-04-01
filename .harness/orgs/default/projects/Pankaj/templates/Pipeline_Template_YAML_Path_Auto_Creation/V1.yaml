@@ -1,0 +1,28 @@
+template:
+  name: Pipeline Template YAML Path Auto Creation
+  identifier: Pipeline_Template_YAML_Path_Auto_Creation
+  versionLabel: V1
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          tags: {}
+          template:
+            templateRef: Shell_Stage_Template
+            versionLabel: V1
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: ShellScript_1
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
