@@ -1,5 +1,5 @@
 pipeline:
-  name: Git Auth Demo
+  name: Git Auth Demo Test
   identifier: Git_Auth_Demo
   tags: {}
   template:
