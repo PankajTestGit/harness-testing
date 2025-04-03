@@ -1,0 +1,26 @@
+template:
+  name: Pipeline Stage Template Path Auto
+  type: Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: echo "Main Stage S1"
+                environmentVariables: []
+                outputVariables: []
+              timeout: <+input>
+  identifier: Pipeline_Stage_Template_Path_Auto
+  versionLabel: V1
