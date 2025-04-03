@@ -1,0 +1,5 @@
+environment:
+  name: Test Env Path Auto Creation
+  identifier: Test_Env_Path_Auto_Creation
+  orgIdentifier: default
+  type: PreProduction
