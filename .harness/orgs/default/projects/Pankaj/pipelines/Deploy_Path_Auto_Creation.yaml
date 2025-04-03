@@ -13,8 +13,8 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: <+input>
-            serviceInputs: <+input>
+            serviceRef: Pipeline_Svc_Auto_Path
+            gitBranch: main
           environment:
             environmentRef: <+input>
             deployToAll: false
