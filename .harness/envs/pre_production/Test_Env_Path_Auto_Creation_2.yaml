@@ -1,0 +1,4 @@
+environment:
+  name: Test Env Path Auto Creation 2
+  identifier: Test_Env_Path_Auto_Creation_2
+  type: PreProduction
