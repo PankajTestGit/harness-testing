@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: Project Infra Path Auto
+  identifier: Project_Infra_Path_Auto
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  environmentRef: Env_Path_Auto_Creation
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: <+input>
+    namespace: <+input>
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
