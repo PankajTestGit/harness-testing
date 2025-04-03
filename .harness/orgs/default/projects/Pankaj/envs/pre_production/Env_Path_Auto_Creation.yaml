@@ -1,0 +1,6 @@
+environment:
+  name: Env Path Auto Creation
+  identifier: Env_Path_Auto_Creation
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  type: PreProduction
