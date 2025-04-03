@@ -1,0 +1,13 @@
+template:
+  name: Rolling Pipeline Step Template Path Auto
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  spec:
+    type: K8sRollingDeploy
+    timeout: 10m
+    spec:
+      skipDryRun: false
+      pruningEnabled: false
+  identifier: Rolling_Pipeline_Step_Template_Path_Auto
+  versionLabel: V1
