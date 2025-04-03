@@ -23,11 +23,10 @@ pipeline:
               - step:
                   name: Rollout Deployment
                   identifier: rolloutDeployment
-                  type: K8sRollingDeploy
-                  timeout: 10m
-                  spec:
-                    skipDryRun: false
-                    pruningEnabled: false
+                  template:
+                    templateRef: Rolling_Pipeline_Step_Template_Path_Auto
+                    versionLabel: V1
+                    gitBranch: main
             rollbackSteps:
               - step:
                   name: Rollback Rollout Deployment
