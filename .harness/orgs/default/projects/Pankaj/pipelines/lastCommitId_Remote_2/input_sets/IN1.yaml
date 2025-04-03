@@ -1,0 +1,34 @@
+inputSet:
+  name: IN1
+  identifier: IN1
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: lastCommitId_Remote_2
+    template:
+      templateInputs:
+        stages:
+          - stage:
+              identifier: S1
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: ShellScript_1
+                        type: ShellScript
+                        timeout: <+input>
+          - stage:
+              identifier: S2
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: ShellScript_1
+                        type: ShellScript
+                        timeout: <+input>
+        variables:
+          - name: S2
+            type: String
+            value: S2
