@@ -1,0 +1,6 @@
+environment:
+  name: Test Env Path Auto Creation 3
+  identifier: Test_Env_Path_Auto_Creation_3
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  type: Production
