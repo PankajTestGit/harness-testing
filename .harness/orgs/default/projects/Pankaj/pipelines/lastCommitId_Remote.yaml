@@ -1,0 +1,36 @@
+pipeline:
+  name: lastCommitId Remote
+  identifier: lastCommitId_Remote
+  tags: {}
+  template:
+    templateRef: Pipeline_Shell
+    versionLabel: V1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: S1
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      timeout: <+input>
+            variables:
+              - name: S1_Str1
+                type: String
+                default: b
+                value: <+input>.default(b)
+      variables:
+        - name: Str1
+          type: String
+          value: <+input>.default(a)
+        - name: Str2
+          type: String
+          value: <+input>.default(b)
+        - name: Num1
+          type: Number
+          value: <+input>.default(1)
+  projectIdentifier: Pankaj
+  orgIdentifier: default
