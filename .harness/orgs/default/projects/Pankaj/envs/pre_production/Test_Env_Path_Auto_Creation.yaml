@@ -1,0 +1,8 @@
+environment:
+  name: Test Env Path Auto Creation
+  identifier: Test_Env_Path_Auto_Creation
+  description: ""
+  tags: {}
+  type: PreProduction
+  orgIdentifier: default
+  projectIdentifier: Pankaj
