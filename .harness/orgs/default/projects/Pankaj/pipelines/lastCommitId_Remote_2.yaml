@@ -30,7 +30,7 @@ pipeline:
       variables:
         - name: S1
           type: String
-          value: <+input>.default(S1)
+          value: S1
         - name: S2
           type: String
           value: <+input>.default(S2)
