@@ -1,0 +1,11 @@
+infrastructureDefinition:
+  name: Acc Infra Path Auto
+  identifier: Acc_Infra_Path_Auto
+  environmentRef: Acc_Env_Path_Auto_Creation
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: <+input>
+    namespace: <+input>
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
