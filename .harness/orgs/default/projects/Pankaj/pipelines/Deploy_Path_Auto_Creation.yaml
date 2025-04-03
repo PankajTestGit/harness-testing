@@ -17,14 +17,6 @@ pipeline:
           environment:
             environmentRef: org.Org_Env_Path_Auto
             deployToAll: false
-            infrastructureDefinitions:
-              - identifier: Pipeline_Project_Infra_Path_Auto
-                inputs:
-                  identifier: Pipeline_Project_Infra_Path_Auto
-                  type: KubernetesDirect
-                  spec:
-                    connectorRef: <+input>
-                    namespace: <+input>
           execution:
             steps:
               - step:
