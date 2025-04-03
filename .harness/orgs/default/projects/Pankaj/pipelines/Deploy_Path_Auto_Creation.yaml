@@ -15,8 +15,7 @@ pipeline:
           service:
             serviceRef: Pipeline_Svc_Auto_Path
           environment:
-            environmentRef: Pipeline_Env_Path_Auto_Creation
-            gitBranch: main
+            environmentRef: org.Org_Env_Path_Auto
             deployToAll: false
             infrastructureDefinitions:
               - identifier: Pipeline_Project_Infra_Path_Auto
