@@ -1,6 +1,6 @@
 pipeline:
   name: Remote 1
-  identifier: Remote_1
+  identifier: Remote
   projectIdentifier: Pankaj
   orgIdentifier: default
   tags: {}
@@ -9,26 +9,20 @@ pipeline:
         - stage:
             name: S1
             identifier: S1
-            description: ""
-            type: Custom
-            spec:
-              execution:
-                steps:
-                  - step:
-                      type: ShellScript
-                      name: ShellScript_1
-                      identifier: ShellScript_1
-                      spec:
-                        shell: Bash
-                        onDelegate: true
-                        source:
-                          type: Inline
-                          spec:
-                            script: echo "Main Stage S1"
-                        environmentVariables: []
-                        outputVariables: []
-                      timeout: <+input>
             tags: {}
+            template:
+              templateRef: Pipeline_Stage_Template_Path_Auto
+              versionLabel: V1
+              gitBranch: main
+              templateInputs:
+                type: Custom
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: ShellScript_1
+                          type: ShellScript
+                          timeout: <+input>
         - stage:
             name: S2
             identifier: S2
