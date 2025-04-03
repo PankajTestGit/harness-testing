@@ -1,0 +1,5 @@
+service:
+  name: Auto Creation Path
+  identifier: Auto_Creation_Path
+  orgIdentifier: default
+  projectIdentifier: Pankaj
