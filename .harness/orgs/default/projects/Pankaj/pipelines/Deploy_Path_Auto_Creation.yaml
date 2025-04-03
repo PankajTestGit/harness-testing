@@ -18,6 +18,14 @@ pipeline:
             environmentRef: Pipeline_Env_Path_Auto_Creation
             gitBranch: main
             deployToAll: false
+            infrastructureDefinitions:
+              - identifier: Pipeline_Project_Infra_Path_Auto
+                inputs:
+                  identifier: Pipeline_Project_Infra_Path_Auto
+                  type: KubernetesDirect
+                  spec:
+                    connectorRef: <+input>
+                    namespace: <+input>
           execution:
             steps:
               - step:
