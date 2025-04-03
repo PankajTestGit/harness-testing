@@ -1,5 +1,6 @@
 inputSet:
   name: IN1
+  tags: {}
   identifier: IN1
   orgIdentifier: default
   projectIdentifier: Pankaj
@@ -29,4 +30,4 @@ inputSet:
             value: b
           - name: Num1
             type: Number
-            value: 1
+            value: 2
