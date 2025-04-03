@@ -1,0 +1,9 @@
+service:
+  name: Pipeline Svc Auto Path
+  identifier: Pipeline_Svc_Auto_Path
+  serviceDefinition:
+    type: Kubernetes
+    spec: {}
+  gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: Pankaj
