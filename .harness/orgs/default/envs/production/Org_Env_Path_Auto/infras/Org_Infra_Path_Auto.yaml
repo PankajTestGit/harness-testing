@@ -1,0 +1,12 @@
+infrastructureDefinition:
+  name: "Org Infra Path Auto "
+  identifier: Org_Infra_Path_Auto
+  orgIdentifier: default
+  environmentRef: Org_Env_Path_Auto
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: <+input>
+    namespace: <+input>
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
