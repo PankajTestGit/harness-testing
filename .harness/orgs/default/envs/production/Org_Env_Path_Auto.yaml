@@ -1,0 +1,5 @@
+environment:
+  name: Org Env Path Auto
+  identifier: Org_Env_Path_Auto
+  orgIdentifier: default
+  type: Production
