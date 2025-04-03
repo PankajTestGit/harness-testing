@@ -1,0 +1,8 @@
+environment:
+  name: Pipeline Env Path Auto Creation
+  identifier: Pipeline_Env_Path_Auto_Creation
+  description: ""
+  tags: {}
+  type: Production
+  orgIdentifier: default
+  projectIdentifier: Pankaj
