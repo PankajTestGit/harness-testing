@@ -1,0 +1,33 @@
+template:
+  name: Project Template Path Auto
+  identifier: Project_Template_Path_Auto
+  versionLabel: V1
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo Hello World
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: <+input>
+          tags: {}
