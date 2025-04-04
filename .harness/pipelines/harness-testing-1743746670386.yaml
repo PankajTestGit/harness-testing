@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_harness_testing_1743746672422
+  name: Build harness-testing
+  orgIdentifier: default
+  projectIdentifier: johannes2
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Pankaj_Git
+        repoName: harness-testing
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
