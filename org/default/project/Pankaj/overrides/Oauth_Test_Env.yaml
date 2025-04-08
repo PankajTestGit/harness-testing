@@ -8,3 +8,7 @@ overrides:
       type: String
       value: <+input>
       required: false
+    - name: Test 3
+      type: Number
+      value: <+input>
+      required: false
