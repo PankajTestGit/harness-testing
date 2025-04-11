@@ -1,0 +1,36 @@
+pipeline:
+  name: Run Time Variables
+  identifier: Run_Time_Variables
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  variables:
+    - name: Str1
+      type: String
+      description: ""
+      required: false
+      value: <+input>
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo <+pipeline.variables.Str1>
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
