@@ -1,0 +1,11 @@
+inputSet:
+  name: IN1
+  identifier: IN1
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Run_Time_Variables
+    variables:
+      - name: Str1
+        type: String
+        value: a
