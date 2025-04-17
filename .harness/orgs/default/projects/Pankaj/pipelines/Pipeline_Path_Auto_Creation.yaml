@@ -2,39 +2,5 @@ pipeline:
   name: "Pipeline Path Auto Creation "
   identifier: Pipeline_Path_Auto_Creation
   tags: {}
-  template:
-    templateRef: Pipeline_Variable
-    versionLabel: V1
-    gitBranch: main
-    templateInputs:
-      stages:
-        - stage:
-            identifier: S1
-            type: Custom
-            spec:
-              execution:
-                steps:
-                  - step:
-                      identifier: ShellScript_1
-                      type: ShellScript
-                      spec:
-                        environmentVariables:
-                          - name: B
-                            type: String
-                            value: <+input>
-                      timeout: <+input>
-      variables:
-        - name: D
-          type: String
-          value: <+input>.default(d)
-        - name: E
-          type: String
-          value: <+input>.default(e)
-        - name: F
-          type: String
-          value: <+input>.default(f)
-        - name: G
-          type: String
-          value: <+input>.default(g)
   projectIdentifier: Pankaj
   orgIdentifier: default
