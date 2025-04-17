@@ -4,3 +4,20 @@ pipeline:
   tags: {}
   projectIdentifier: Pankaj
   orgIdentifier: default
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        tags: {}
+        template:
+          templateRef: Pipeline_Stage_Template_Path_Auto
+          versionLabel: V1
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      timeout: <+input>
