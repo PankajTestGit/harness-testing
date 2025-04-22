@@ -1,0 +1,11 @@
+infrastructureDefinition:
+  name: Acc Infra
+  identifier: Acc_Infra
+  environmentRef: Acc_Env_1
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: <+input>
+    namespace: <+input>
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
