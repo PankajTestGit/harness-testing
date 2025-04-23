@@ -57,3 +57,8 @@ template:
         description: ""
         required: false
         value: <+input>.default(1)
+      - name: InputSet
+        type: String
+        description: ""
+        required: false
+        value: <+input>
