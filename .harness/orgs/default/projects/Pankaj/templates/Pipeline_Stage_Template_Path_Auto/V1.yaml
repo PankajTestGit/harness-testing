@@ -22,5 +22,11 @@ template:
                 environmentVariables: []
                 outputVariables: []
               timeout: <+input>
+    variables:
+      - name: Test
+        type: String
+        description: ""
+        required: false
+        value: <+input>.allowedValues(a,s,d,f)
   identifier: Pipeline_Stage_Template_Path_Auto
   versionLabel: V1
