@@ -1,5 +1,5 @@
 pipeline:
-  name: "Pipeline Path Auto Creation "
+  name: 'Pipeline Path Auto Creation '
   identifier: Pipeline_Path_Auto_Creation
   tags: {}
   projectIdentifier: Pankaj
@@ -24,4 +24,7 @@ pipeline:
             variables:
               - name: Test
                 type: String
-                value: <+input>.allowedValues(a,s,d,f)
+                value: "<+input>.allowedValues(a,s,d,f)"
+              - name: Test2
+                type: String
+                value: <+input>
