@@ -1,5 +1,5 @@
 pipeline:
-  name: "Pipeline Path Auto Creation "
+  name: 'Pipeline Path Auto Creation '
   identifier: Pipeline_Path_Auto_Creation
   tags: {}
   projectIdentifier: Pankaj
@@ -21,3 +21,7 @@ pipeline:
                       identifier: ShellScript_1
                       type: ShellScript
                       timeout: <+input>
+            variables:
+              - name: Test
+                type: String
+                value: "<+input>.allowedValues(a,s,d,f)"
