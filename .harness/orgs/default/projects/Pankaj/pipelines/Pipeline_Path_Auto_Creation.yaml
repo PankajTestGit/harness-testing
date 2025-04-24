@@ -1,7 +1,8 @@
 pipeline:
   name: "Pipeline Path Auto Creation "
   identifier: Pipeline_Path_Auto_Creation
-  tags: {}
+  tags:
+    <+pipeline.stages.S1.variables.Test2>: ""
   projectIdentifier: Pankaj
   orgIdentifier: default
   stages:
