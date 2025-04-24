@@ -23,6 +23,10 @@ pipeline:
                           identifier: ShellScript_1
                           type: ShellScript
                           timeout: <+input>
+                variables:
+                  - name: Test
+                    type: String
+                    value: "<+input>.allowedValues(a,s,d,f)"
         - stage:
             name: S2
             identifier: S2
