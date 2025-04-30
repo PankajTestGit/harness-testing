@@ -42,3 +42,8 @@ template:
               description: ""
               required: false
               value: <+input>
+            - name: var3
+              type: String
+              description: ""
+              required: false
+              value: <+input>
