@@ -1,0 +1,24 @@
+pipeline:
+  name: test
+  identifier: test
+  tags: {}
+  template:
+    templateRef: pipetemplate
+    versionLabel: v1
+    gitBranch: main
+    templateInputs:
+      stages:
+        - stage:
+            identifier: s1
+            type: Custom
+            spec:
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                infrastructureDefinitions: <+input>
+            variables:
+              - name: var1
+                type: String
+                value: "<+input>.allowedValues(1,2)"
+  projectIdentifier: testremote2
+  orgIdentifier: default
