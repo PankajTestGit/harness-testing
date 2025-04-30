@@ -1,0 +1,33 @@
+template:
+  name: asdasd
+  identifier: asdasd
+  versionLabel: asdas
+  type: Pipeline
+  projectIdentifier: testproj1
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: asd
+          identifier: asd
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: asd
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
