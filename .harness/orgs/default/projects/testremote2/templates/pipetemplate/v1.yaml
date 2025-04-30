@@ -42,3 +42,8 @@ template:
               description: ""
               required: false
               value: <+input>.allowedValues(1,2)
+            - name: var2
+              type: String
+              description: ""
+              required: false
+              value: <+input>
