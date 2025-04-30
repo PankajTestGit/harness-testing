@@ -36,3 +36,9 @@ template:
               environmentInputs: <+input>
               infrastructureDefinitions: <+input>
           tags: {}
+          variables:
+            - name: var1
+              type: String
+              description: ""
+              required: false
+              value: <+input>.allowedValues(1,2)
