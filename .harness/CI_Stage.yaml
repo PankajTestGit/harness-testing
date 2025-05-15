@@ -1,0 +1,35 @@
+pipeline:
+  name: CI Stage
+  identifier: CI_Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: false
+          caching:
+            enabled: true
+            override: true
+            paths: []
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: echo Hello World
