@@ -27,3 +27,10 @@ template:
                           templateInputs:
                             type: ShellScript
                             timeout: <+input>
+    properties:
+      ci:
+        codebase:
+          connectorRef: Pankaj_Test_Git
+          repoName: <+input>
+          build: <+input>
+          sparseCheckout: []
