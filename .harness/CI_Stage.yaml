@@ -33,3 +33,10 @@ pipeline:
                   spec:
                     shell: Sh
                     command: echo Hello World
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Pankaj_Git
+        repoName: <+input>
+        build: <+input>
+        sparseCheckout: []
