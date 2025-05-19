@@ -42,3 +42,10 @@ template:
                                   spec:
                                     provisionerIdentifier: <+input>
                         delegateSelectors: <+input>
+    properties:
+      ci:
+        codebase:
+          connectorRef: account.Pankaj_Git
+          repoName: <+input>
+          build: <+input>
+          sparseCheckout: []
