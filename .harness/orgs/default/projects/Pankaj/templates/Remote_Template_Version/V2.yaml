@@ -42,4 +42,11 @@ template:
                                   spec:
                                     provisionerIdentifier: <+input>
                         delegateSelectors: <+input>
+    properties:
+      ci:
+        codebase:
+          connectorRef: Pankaj_Test_Git
+          repoName: <+input>
+          build: <+input>
+          sparseCheckout: []
   versionLabel: V2
