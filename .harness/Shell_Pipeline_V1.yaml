@@ -77,3 +77,9 @@ template:
             runtime:
               type: Cloud
               spec: {}
+    properties:
+      ci:
+        codebase:
+          repoName: <+input>
+          build: <+input>
+          sparseCheckout: []
