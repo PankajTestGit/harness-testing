@@ -21,5 +21,22 @@ pipeline:
                             templateInputs:
                               type: ShellScript
                               timeout: <+input>
+        - stage:
+            identifier: S3
+            type: CI
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: Run_1
+                      type: Run
+                      spec:
+                        registryRef: <+input>
+                        image: <+input>
+      properties:
+        ci:
+          codebase:
+            repoName: <+input>
+            build: <+input>
   projectIdentifier: Pankaj
   orgIdentifier: default
