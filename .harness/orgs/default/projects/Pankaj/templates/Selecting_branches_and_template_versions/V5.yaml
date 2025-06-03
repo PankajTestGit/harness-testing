@@ -1,0 +1,27 @@
+template:
+  name: Selecting branches and template versions
+  identifier: Selecting_branches_and_template_versions
+  type: Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: echo Hello V5
+                environmentVariables: []
+                outputVariables: []
+              timeout: <+input>
+  versionLabel: V5
