@@ -1,0 +1,111 @@
+pipeline:
+  name: Remote Pipeline Audit
+  identifier: Remote_Pipeline_Audit
+  tags: {}
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - stepGroup:
+                  name: S1
+                  identifier: S1
+                  steps:
+                    - parallel:
+                        - step:
+                            type: ShellScript
+                            name: ShellScript_1
+                            identifier: ShellScript_1
+                            spec:
+                              shell: Bash
+                              executionTarget: {}
+                              source:
+                                type: Inline
+                                spec:
+                                  script: echo Hello World
+                              environmentVariables: []
+                              outputVariables: []
+                            timeout: 10m
+                        - step:
+                            type: ShellScript
+                            name: ShellScript_2
+                            identifier: ShellScript_2
+                            spec:
+                              shell: Bash
+                              executionTarget: {}
+                              source:
+                                type: Inline
+                                spec:
+                                  script: echo Hello World
+                              environmentVariables: []
+                              outputVariables: []
+                            timeout: 10m
+              - stepGroup:
+                  name: S2
+                  identifier: S2
+                  steps:
+                    - parallel:
+                        - step:
+                            type: ShellScript
+                            name: ShellScript_3
+                            identifier: ShellScript_3
+                            spec:
+                              shell: Bash
+                              executionTarget: {}
+                              source:
+                                type: Inline
+                                spec:
+                                  script: echo Hello World
+                              environmentVariables: []
+                              outputVariables: []
+                            timeout: 10m
+                        - step:
+                            type: ShellScript
+                            name: ShellScript_4
+                            identifier: ShellScript_4
+                            spec:
+                              shell: Bash
+                              executionTarget: {}
+                              source:
+                                type: Inline
+                                spec:
+                                  script: echo Hello World
+                              environmentVariables: []
+                              outputVariables: []
+                            timeout: 10m
+                  failureStrategies:
+                    - onFailure:
+                        errors:
+                          - Timeout
+                        action:
+                          type: ManualIntervention
+                          spec:
+                            timeout: 10m
+                            onTimeout:
+                              action:
+                                type: MarkAsSuccess
+                  when:
+                    stageStatus: Failure
+              - step:
+                  type: ShellScript
+                  name: ShellScript_5
+                  identifier: ShellScript_5
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo Hello
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+            rollbackSteps: []
+          serviceDependencies: []
+        tags: {}
