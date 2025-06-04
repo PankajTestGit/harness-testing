@@ -48,7 +48,7 @@ template:
                           script: echo Hello
                       environmentVariables: []
                       outputVariables: []
-                    timeout: 10m
+                    timeout: <+input>
           tags: {}
       - stage:
           name: S3
