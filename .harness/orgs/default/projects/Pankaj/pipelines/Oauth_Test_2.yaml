@@ -22,6 +22,16 @@ pipeline:
                               type: ShellScript
                               timeout: <+input>
         - stage:
+            identifier: S2
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      timeout: <+input>
+        - stage:
             identifier: S3
             type: CI
             spec:
