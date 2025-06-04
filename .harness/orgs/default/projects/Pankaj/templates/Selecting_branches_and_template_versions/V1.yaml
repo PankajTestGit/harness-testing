@@ -25,3 +25,17 @@ template:
                 environmentVariables: []
                 outputVariables: []
               timeout: <+input>
+          - step:
+              type: ShellScript
+              name: ShellScript_2
+              identifier: ShellScript_2
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: echo Hello World
+                environmentVariables: []
+                outputVariables: []
+              timeout: <+input>
