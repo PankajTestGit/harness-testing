@@ -1,0 +1,21 @@
+template:
+  name: deployment test step
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  spec:
+    type: Command
+    timeout: 10m
+    spec:
+      onDelegate: false
+      environmentVariables: []
+      outputVariables: []
+      commandUnits:
+        - identifier: test
+          name: test
+          type: Copy
+          spec:
+            sourceType: Artifact
+            destinationPath: test
+  identifier: deployment_test_step
+  versionLabel: V1
