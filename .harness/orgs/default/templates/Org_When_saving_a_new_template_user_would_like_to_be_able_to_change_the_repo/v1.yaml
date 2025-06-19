@@ -1,0 +1,20 @@
+template:
+  name: Org When saving a new template user would like to be able to change the repo
+  type: Step
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hello World
+      environmentVariables: []
+      outputVariables: []
+  identifier: Org_When_saving_a_new_template_user_would_like_to_be_able_to_change_the_repo
+  versionLabel: v1
