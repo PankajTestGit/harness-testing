@@ -1,0 +1,20 @@
+template:
+  name: Saving as a new template after update
+  type: Step
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hello World
+      environmentVariables: []
+      outputVariables: []
+  identifier: Saving_as_a_new_template_after_update
+  versionLabel: v1
