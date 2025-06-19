@@ -1,0 +1,21 @@
+template:
+  name: Saving as a new template
+  identifier: Saving_as_a_new_template
+  versionLabel: V1
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hellp
+      environmentVariables: []
+      outputVariables: []
