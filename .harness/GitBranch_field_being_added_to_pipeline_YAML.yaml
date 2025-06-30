@@ -1,0 +1,21 @@
+pipeline:
+  name: GitBranch field being added to pipeline YAML
+  identifier: GitBranch_field_being_added_to_pipeline_YAML
+  tags: {}
+  template:
+    templateRef: GitBranch_field_being_added_to_pipeline_YAML
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: S1
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      timeout: <+input>
+  projectIdentifier: Pankaj
+  orgIdentifier: default
