@@ -1,0 +1,33 @@
+template:
+  name: GitBranch field being added to pipeline YAML
+  identifier: GitBranch_field_being_added_to_pipeline_YAML
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo Hello
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: <+input>
+          tags: {}
