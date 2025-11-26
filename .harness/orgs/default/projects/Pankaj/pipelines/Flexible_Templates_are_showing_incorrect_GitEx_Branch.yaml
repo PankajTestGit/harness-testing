@@ -1,0 +1,26 @@
+pipeline:
+  name: Flexible Templates are showing incorrect GitEx Branch
+  identifier: Flexible_Templates_are_showing_incorrect_GitEx_Branch
+  tags: {}
+  template:
+    templateRef: Pipeline_Non_Mani_Branch
+    versionLabel: V1
+    gitBranch: main-patch-3
+    templateInputs:
+      stages:
+        - stage:
+            identifier: S1
+            template:
+              templateInputs:
+                type: Custom
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: S1
+                          template:
+                            templateInputs:
+                              type: ShellScript
+                              timeout: <+input>
+  projectIdentifier: Pankaj
+  orgIdentifier: default
