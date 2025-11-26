@@ -4,7 +4,7 @@ pipeline:
   tags: {}
   template:
     templateRef: Pipeline_Non_Mani_Branch
-    versionLabel: V1
+    versionLabel: V2
     gitBranch: main-patch-3
     templateInputs:
       stages:
