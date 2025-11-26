@@ -1,0 +1,23 @@
+template:
+  name: Custom Stage Non Main Branch
+  identifier: Custom_Stage_Non_Main_Branch
+  versionLabel: V1
+  type: Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: S1
+              identifier: S1
+              template:
+                templateRef: Shell_Template_Non_Main_Branch
+                versionLabel: V1
+                gitBranch: main-patch
+                templateInputs:
+                  type: ShellScript
+                  timeout: <+input>
