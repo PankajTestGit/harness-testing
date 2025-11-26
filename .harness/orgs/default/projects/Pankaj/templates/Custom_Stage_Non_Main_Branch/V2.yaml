@@ -16,7 +16,6 @@ template:
               template:
                 templateRef: Shell_Template_Non_Main_Branch
                 versionLabel: V1
-                gitBranch: main-patch
                 templateInputs:
                   type: ShellScript
                   timeout: <+input>
