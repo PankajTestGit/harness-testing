@@ -1,0 +1,21 @@
+template:
+  name: Shell Template Non Main Branch
+  identifier: Shell_Template_Non_Main_Branch
+  versionLabel: V1
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hello World
+      environmentVariables: []
+      outputVariables: []
