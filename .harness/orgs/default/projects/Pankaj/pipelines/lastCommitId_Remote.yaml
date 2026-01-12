@@ -32,5 +32,8 @@ pipeline:
         - name: Num1
           type: Number
           value: <+input>.default(1)
+        - name: InputSet
+          type: String
+          value: <+input>
   projectIdentifier: Pankaj
   orgIdentifier: default
