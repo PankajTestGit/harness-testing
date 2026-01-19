@@ -26,5 +26,5 @@ pipeline:
                         script: echo S1
                     environmentVariables: []
                     outputVariables: []
-                  timeout: <+inline>
+                  timeout: <+input>
         tags: {}
