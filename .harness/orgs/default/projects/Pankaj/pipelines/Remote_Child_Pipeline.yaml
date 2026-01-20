@@ -41,4 +41,18 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: <+input>
+              - step:
+                  type: ShellScript
+                  name: ShellScript_3
+                  identifier: ShellScript_3
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo S3
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: <+input>
         tags: {}
