@@ -37,7 +37,7 @@ pipeline:
           org: default
           pipeline: Remote_Child_Pipeline
           project: Pankaj
-          gitBranch: test-1
+          gitBranch: test-1-patch
           inputs:
             identifier: Remote_Child_Pipeline
             stages:
