@@ -1,0 +1,53 @@
+pipeline:
+  name: Remove parent with default and non-default remote child pipeline
+  identifier: Remove_parent_with_default_and_nondefault_remote_child_pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Default branch child pipeline
+        identifier: Default_branch_child_pipeline
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: Remote_Default_branch
+          project: Pankaj
+          gitBranch: main
+          inputs:
+            identifier: Remote_Default_branch
+            stages:
+              - stage:
+                  identifier: S1
+                  type: Custom
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            timeout: <+input>
+    - stage:
+        name: Non default branch child pipeline
+        identifier: Non_default_branch_child_pipeline
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: Remote_Child_Pipeline
+          project: Pankaj
+          gitBranch: test-1
+          inputs:
+            identifier: Remote_Child_Pipeline
+            stages:
+              - stage:
+                  identifier: S1
+                  type: Custom
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            timeout: <+input>
