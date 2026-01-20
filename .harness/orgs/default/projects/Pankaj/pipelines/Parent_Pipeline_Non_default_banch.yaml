@@ -1,0 +1,30 @@
+pipeline:
+  name: Parent Pipeline Non default banch
+  identifier: Parent_Pipeline_Non_default_banch
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: Remote_Default_branch
+          project: Pankaj
+          gitBranch: main
+          inputs:
+            identifier: Remote_Default_branch
+            stages:
+              - stage:
+                  identifier: S1
+                  type: Custom
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            timeout: <+input>
