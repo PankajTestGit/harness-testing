@@ -37,7 +37,7 @@ pipeline:
           org: default
           pipeline: Remote_Child_Pipeline
           project: Pankaj
-          gitBranch: test-1
+          gitBranch: test-1-patch-patch-long-name-for-testing-overlap
           inputs:
             identifier: Remote_Child_Pipeline
             stages:
@@ -51,3 +51,12 @@ pipeline:
                             identifier: ShellScript_1
                             type: ShellScript
                             timeout: <+input>
+                        - step:
+                            identifier: ShellScript_2
+                            type: ShellScript
+                            timeout: <+input>
+                        - step:
+                            identifier: ShellScript_3
+                            type: ShellScript
+                            timeout: <+input>
+        tags: {}
