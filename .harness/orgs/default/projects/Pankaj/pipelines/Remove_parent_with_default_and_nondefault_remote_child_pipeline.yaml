@@ -1,5 +1,5 @@
 pipeline:
-  name: Remove parent with default and non-default remote child pipeline
+  name: Remote parent with default and non-default remote child pipeline
   identifier: Remove_parent_with_default_and_nondefault_remote_child_pipeline
   projectIdentifier: Pankaj
   orgIdentifier: default
