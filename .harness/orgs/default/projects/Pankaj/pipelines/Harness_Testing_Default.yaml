@@ -1,0 +1,30 @@
+pipeline:
+  name: Harness Testing - Default
+  identifier: Harness_Testing_Default
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo Hello Harness Testing - Default
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: <+input>
+        tags: {}
