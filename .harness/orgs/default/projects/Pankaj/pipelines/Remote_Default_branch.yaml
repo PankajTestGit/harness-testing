@@ -28,3 +28,26 @@ pipeline:
                     outputVariables: []
                   timeout: <+input>
         tags: {}
+    - stage:
+        name: S2
+        identifier: S2
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo S2
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: <+input>
+        tags: {}
