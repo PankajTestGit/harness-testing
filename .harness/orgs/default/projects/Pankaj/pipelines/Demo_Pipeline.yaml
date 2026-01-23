@@ -34,11 +34,7 @@ pipeline:
                     execution:
                       steps:
                         - step:
-                            identifier: Wait_1
-                            type: Wait
-                            spec:
-                              duration: <+input>
-                        - step:
                             identifier: ShellScript_1
                             type: ShellScript
                             timeout: <+input>
+          gitBranch: main-patch-22-Jan
