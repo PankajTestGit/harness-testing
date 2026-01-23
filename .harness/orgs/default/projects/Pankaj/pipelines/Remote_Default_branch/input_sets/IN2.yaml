@@ -24,6 +24,11 @@ inputSet:
             execution:
               steps:
                 - step:
+                    identifier: Wait_1
+                    type: Wait
+                    spec:
+                      duration: 5m
+                - step:
                     identifier: ShellScript_1
                     type: ShellScript
                     timeout: 2m
