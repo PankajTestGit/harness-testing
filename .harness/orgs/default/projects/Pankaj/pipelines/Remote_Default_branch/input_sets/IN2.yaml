@@ -1,0 +1,28 @@
+inputSet:
+  name: IN2
+  identifier: IN2
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Remote_Default_branch
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 2m
+      - stage:
+          identifier: S2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 2m
