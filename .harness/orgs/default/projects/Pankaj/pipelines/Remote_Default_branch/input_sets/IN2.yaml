@@ -1,5 +1,6 @@
 inputSet:
   name: IN2
+  tags: {}
   identifier: IN2
   orgIdentifier: default
   projectIdentifier: Pankaj
@@ -15,7 +16,7 @@ inputSet:
                 - step:
                     identifier: ShellScript_1
                     type: ShellScript
-                    timeout: 2m
+                    timeout: 5m
       - stage:
           identifier: S2
           type: Custom
