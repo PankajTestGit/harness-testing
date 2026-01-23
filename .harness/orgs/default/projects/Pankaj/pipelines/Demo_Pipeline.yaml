@@ -1,0 +1,44 @@
+pipeline:
+  name: Demo Pipeline
+  identifier: Demo_Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          project: Pankaj
+          pipeline: Remote_Default_branch
+          inputs:
+            identifier: Remote_Default_branch
+            stages:
+              - stage:
+                  identifier: S1
+                  type: Custom
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            timeout: <+input>
+              - stage:
+                  identifier: S2
+                  type: Custom
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: Wait_1
+                            type: Wait
+                            spec:
+                              duration: <+input>
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            timeout: <+input>
