@@ -1,0 +1,29 @@
+pipeline:
+  name: Test demo 1
+  identifier: Test_demo_1
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: UI_Repo_Default
+          project: Pankaj
+          inputs:
+            identifier: UI_Repo_Default
+            stages:
+              - stage:
+                  identifier: S1
+                  type: Custom
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            timeout: <+input>
