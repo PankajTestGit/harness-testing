@@ -1,0 +1,18 @@
+inputSet:
+  pipeline:
+    identifier: Allow_Input_Set_to_save_in_new_branch_from_run_pipeline_flow
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 10m
+  name: IN1
+  identifier: IN1
+  orgIdentifier: default
+  projectIdentifier: Test
