@@ -1,0 +1,30 @@
+pipeline:
+  name: Allow Input Set to save in new branch from run pipeline flow
+  identifier: Allow_Input_Set_to_save_in_new_branch_from_run_pipeline_flow
+  projectIdentifier: Test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo Hello World
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: <+input>
+        tags: {}
