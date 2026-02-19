@@ -1,0 +1,25 @@
+inputSet:
+  name: IN1
+  identifier: IN1
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Test_demo_1
+    stages:
+      - stage:
+          identifier: S1
+          type: Pipeline
+          spec:
+            inputs:
+              identifier: UI_Repo_Default
+              stages:
+                - stage:
+                    identifier: S1
+                    type: Custom
+                    spec:
+                      execution:
+                        steps:
+                          - step:
+                              identifier: ShellScript_1
+                              type: ShellScript
+                              timeout: 5m
