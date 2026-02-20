@@ -16,4 +16,4 @@ inputSet:
                 - step:
                     identifier: ShellScript_1
                     type: ShellScript
-                    timeout: 10m
+                    timeout: 11m
