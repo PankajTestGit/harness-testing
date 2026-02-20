@@ -26,5 +26,5 @@ pipeline:
                         script: echo "Hello World"
                     environmentVariables: []
                     outputVariables: []
-                  timeout: 10m
+                  timeout: <+input>
         tags: {}
