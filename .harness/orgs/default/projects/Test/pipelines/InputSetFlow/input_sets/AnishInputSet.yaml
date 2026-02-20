@@ -1,5 +1,6 @@
 inputSet:
   name: AnishInputSet
+  tags: {}
   identifier: AnishInputSet
   orgIdentifier: default
   projectIdentifier: Test
@@ -15,4 +16,4 @@ inputSet:
                 - step:
                     identifier: ShellScript_1
                     type: ShellScript
-                    timeout: 10s
+                    timeout: 10m
