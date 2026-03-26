@@ -1,0 +1,52 @@
+template:
+  name: Pipeline Non Mani Branch
+  identifier: Pipeline_Non_Mani_Branch
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          tags: {}
+          template:
+            templateRef: Custom_Stage_Non_Main_Branch
+            versionLabel: V2
+            gitBranch: main-patch
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: S1
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
+      - stage:
+          name: S2
+          identifier: S2
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo S2
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: <+input>
+          tags: {}
+  versionLabel: V3
