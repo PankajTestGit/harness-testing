@@ -27,4 +27,18 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: <+input>
+              - step:
+                  type: ShellScript
+                  name: ShellScript_2
+                  identifier: ShellScript_2
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo S2
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: <+input>
         tags: {}
