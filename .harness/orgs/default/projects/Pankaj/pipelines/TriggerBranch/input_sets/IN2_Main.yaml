@@ -1,0 +1,18 @@
+inputSet:
+  name: IN2_Main
+  identifier: IN2_Main
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: TriggerBranch
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 5m
