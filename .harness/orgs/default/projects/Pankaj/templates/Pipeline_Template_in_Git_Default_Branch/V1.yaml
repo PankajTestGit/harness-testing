@@ -1,0 +1,33 @@
+template:
+  name: Pipeline Template in Git Default Branch
+  identifier: Pipeline_Template_in_Git_Default_Branch
+  versionLabel: V1
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo Hello World
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: <+input>
+          tags: {}
