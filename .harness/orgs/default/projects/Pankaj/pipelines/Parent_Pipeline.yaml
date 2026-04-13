@@ -1,0 +1,30 @@
+pipeline:
+  name: Parent Pipeline
+  identifier: Parent_Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          project: Pankaj
+          pipeline: Test_Clone_Pipeline
+          gitBranch: main-patch
+          inputs:
+            identifier: Test_Clone_Pipeline
+            stages:
+              - stage:
+                  identifier: S1
+                  type: Custom
+                  spec:
+                    execution:
+                      steps:
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            timeout: <+input>
