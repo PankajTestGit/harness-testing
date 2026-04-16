@@ -3,7 +3,8 @@ pipeline:
   identifier: Branch_Tag
   projectIdentifier: Pankaj
   orgIdentifier: default
-  tags: {}
+  tags:
+    test: ""
   stages:
     - stage:
         name: S1
