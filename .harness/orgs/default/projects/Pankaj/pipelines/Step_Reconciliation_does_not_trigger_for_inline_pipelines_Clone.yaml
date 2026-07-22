@@ -1,0 +1,37 @@
+pipeline:
+  tags: {}
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: false
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  name: S1
+                  identifier: S1
+                  template:
+                    templateRef: Step_Reconciliation_does_not_trigger_for_inline_pipelines
+                    versionLabel: V1
+                    templateInputs:
+                      type: Run
+                      spec:
+                        command: <+input>
+  identifier: Step_Reconciliation_does_not_trigger_for_inline_pipelines_Clone
+  name: Step Reconciliation does not trigger for inline pipelines - Clone
