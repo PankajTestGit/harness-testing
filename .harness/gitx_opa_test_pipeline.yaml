@@ -1,0 +1,29 @@
+pipeline:
+  name: GitX OPA Test Pipeline
+  identifier: gitx_opa_test_pipeline
+  projectIdentifier: KrishnamoorthyTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: customStage
+        identifier: customStage
+        description: "First stage - must be named customStage to pass OPA policy"
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: Echo Test
+                  identifier: echo_test
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "GitX OPA enforcement test - this pipeline passes the policy"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
