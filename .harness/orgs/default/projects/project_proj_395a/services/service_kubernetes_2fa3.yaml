@@ -4,4 +4,21 @@ service:
   tags: {}
   serviceDefinition:
     type: Kubernetes
-    spec: {}
+    spec:
+      manifests:
+        - manifest:
+            identifier: deepak
+            spec:
+              store:
+                spec:
+                  connectorRef: org.Org_Pankaj_Test_Git
+                  repoName: Harness-test
+                  gitFetchType: Branch
+                  branch: main
+                  paths: <+input>
+                type: Github
+              optionalValuesYaml: false
+              enableDeclarativeRollback: false
+              skipResourceVersioning: false
+            type: K8sManifest
+      artifacts: {}
