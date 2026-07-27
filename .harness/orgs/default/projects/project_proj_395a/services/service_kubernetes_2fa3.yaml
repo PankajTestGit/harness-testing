@@ -1,0 +1,7 @@
+service:
+  name: service_kubernetes_2fa3
+  identifier: service_kubernetes_2fa3
+  tags: {}
+  serviceDefinition:
+    type: Kubernetes
+    spec: {}
