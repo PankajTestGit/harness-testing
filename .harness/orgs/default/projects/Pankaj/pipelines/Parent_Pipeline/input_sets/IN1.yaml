@@ -1,0 +1,25 @@
+inputSet:
+  name: IN1
+  identifier: IN1
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Parent_Pipeline
+    stages:
+      - stage:
+          identifier: S1
+          type: Pipeline
+          spec:
+            inputs:
+              identifier: Test_Clone_Pipeline
+              stages:
+                - stage:
+                    identifier: S1
+                    type: Custom
+                    spec:
+                      execution:
+                        steps:
+                          - step:
+                              identifier: ShellScript_1
+                              type: ShellScript
+                              timeout: 10m
