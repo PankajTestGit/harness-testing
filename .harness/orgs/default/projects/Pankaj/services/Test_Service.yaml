@@ -1,0 +1,10 @@
+service:
+  name: Test Service
+  identifier: Test_Service
+  description: test K8 Sevice in Harness Code
+  tags:
+    Test: ""
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      artifacts: {}
