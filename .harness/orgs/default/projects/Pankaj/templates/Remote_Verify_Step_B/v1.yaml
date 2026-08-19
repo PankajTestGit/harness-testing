@@ -1,0 +1,19 @@
+template:
+  name: Remote Verify Step B
+  identifier: Remote_Verify_Step_B
+  versionLabel: v1
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: ""
