@@ -9,7 +9,7 @@ pipeline:
       type: String
       description: ""
       required: false
-      value: "1"
+      value: 1
   stages:
     - stage:
         name: S1
@@ -42,4 +42,4 @@ pipeline:
             type: String
             description: ""
             required: false
-            value: "2"
+            value: 2
