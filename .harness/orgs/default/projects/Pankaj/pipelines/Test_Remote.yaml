@@ -1,0 +1,44 @@
+pipeline:
+  name: Test Remote
+  identifier: Test_Remote
+  tags: {}
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  variables:
+    - name: Test1
+      type: String
+      description: ""
+      required: false
+      value: "1"
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: |
+                          echo <+pipeline.variables.Test1>
+                          <+stage.variables.test2>
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
+        variables:
+          - name: test2
+            type: String
+            description: ""
+            required: false
+            value: "2"
