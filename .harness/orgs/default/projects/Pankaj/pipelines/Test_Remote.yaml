@@ -32,6 +32,7 @@ pipeline:
                         script: |
                           echo <+pipeline.variables.Test1>
                           echo <+stage.variables.test2>
+                          echo <+stage.variables.test2>
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
