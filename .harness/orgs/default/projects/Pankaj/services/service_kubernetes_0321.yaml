@@ -1,0 +1,6 @@
+service:
+  name: service_kubernetes_0321
+  identifier: service_kubernetes_0321
+  serviceDefinition:
+    type: Kubernetes
+    spec: {}
