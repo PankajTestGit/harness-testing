@@ -1,0 +1,19 @@
+service:
+  name: service_serverless-aws-lambda_1a5b
+  identifier: service_serverless_aws_lambda_1a5b
+  serviceDefinition:
+    type: ServerlessAwsLambda
+    spec:
+      manifests:
+        - manifest:
+            identifier: kjb
+            spec:
+              store:
+                spec:
+                  connectorRef: <+input>
+                  repoName: <+input>
+                  gitFetchType: Branch
+                  branch: br
+                  paths: <+input>
+                type: Github
+            type: ServerlessAwsLambda
