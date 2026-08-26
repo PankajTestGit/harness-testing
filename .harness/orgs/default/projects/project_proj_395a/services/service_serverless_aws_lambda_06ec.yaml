@@ -1,0 +1,20 @@
+service:
+  name: service_serverless-aws-lambda_06ec
+  identifier: service_serverless_aws_lambda_06ec
+  serviceDefinition:
+    type: ServerlessAwsLambda
+    spec:
+      manifests:
+        - manifest:
+            identifier: fd
+            spec:
+              store:
+                spec:
+                  connectorRef: <+input>
+                  repoName: <+input>
+                  gitFetchType: Branch
+                  branch: fsd
+                  paths:
+                    - fasd
+                type: Github
+            type: ServerlessAwsLambda
