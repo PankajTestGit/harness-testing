@@ -1,0 +1,22 @@
+template:
+  name: Stage Shell Step Reference
+  identifier: Stage_Shell_Step_Reference
+  type: Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: S1
+              identifier: S1
+              template:
+                templateRef: Shell_Step_Reference
+                versionLabel: V3
+                templateInputs:
+                  type: ShellScript
+                  timeout: <+input>
+  versionLabel: V3
