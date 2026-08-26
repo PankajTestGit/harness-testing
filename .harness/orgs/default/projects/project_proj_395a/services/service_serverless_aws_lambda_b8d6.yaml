@@ -1,0 +1,20 @@
+service:
+  name: service_serverless-aws-lambda_b8d6
+  identifier: service_serverless_aws_lambda_b8d6
+  serviceDefinition:
+    type: ServerlessAwsLambda
+    spec:
+      manifests:
+        - manifest:
+            identifier: kjhgf
+            spec:
+              store:
+                spec:
+                  connectorRef: ${1}
+                  repoName: Harness-test
+                  gitFetchType: Branch
+                  branch: <+input>
+                  paths:
+                    - /hi
+                type: Github
+            type: ServerlessAwsLambda
