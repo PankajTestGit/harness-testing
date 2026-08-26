@@ -1,0 +1,20 @@
+service:
+  name: service_serverless-aws-lambda_a1f7
+  identifier: service_serverless_aws_lambda_a1f7
+  serviceDefinition:
+    type: ServerlessAwsLambda
+    spec:
+      manifests:
+        - manifest:
+            identifier: fdsa
+            spec:
+              store:
+                spec:
+                  connectorRef: <+input>
+                  repoName: <+input>
+                  gitFetchType: Branch
+                  branch: <+input>
+                  paths:
+                    - /hi
+                type: Github
+            type: ServerlessAwsLambda
