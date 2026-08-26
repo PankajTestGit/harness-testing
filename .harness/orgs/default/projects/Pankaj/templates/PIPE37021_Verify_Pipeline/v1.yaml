@@ -1,0 +1,28 @@
+template:
+  name: PIPE37021 Verify Pipeline
+  identifier: PIPE37021_Verify_Pipeline
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: CD Stage
+          identifier: CD_Stage
+          tags: {}
+          template:
+            templateRef: Test_CD_Stage
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
