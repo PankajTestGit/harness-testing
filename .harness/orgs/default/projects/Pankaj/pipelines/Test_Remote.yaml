@@ -9,7 +9,7 @@ pipeline:
       type: String
       description: ""
       required: false
-      value: "1"
+      value: 1
   stages:
     - stage:
         name: S1
@@ -32,6 +32,7 @@ pipeline:
                         script: |
                           echo <+pipeline.variables.Test1>
                           echo <+stage.variables.test2>
+                          echo <+stage.variables.test2>
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
@@ -41,4 +42,4 @@ pipeline:
             type: String
             description: ""
             required: false
-            value: "2"
+            value: 2
