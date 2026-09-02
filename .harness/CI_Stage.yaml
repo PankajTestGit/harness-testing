@@ -11,11 +11,10 @@ pipeline:
         description: ""
         type: CI
         spec:
-          cloneCodebase: false
+          cloneCodebase: true
           caching:
             enabled: true
             override: true
-            paths: []
           buildIntelligence:
             enabled: true
           platform:
@@ -33,81 +32,9 @@ pipeline:
                   spec:
                     shell: Sh
                     command: echo Hello World
-    - stage:
-        name: S2
-        identifier: S2
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    executionTarget: {}
-                    source:
-                      type: Inline
-                      spec:
-                        script: echo Hello
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-        tags: {}
-    - stage:
-        name: S3
-        identifier: S3
-        description: ""
-        type: CI
-        spec:
-          cloneCodebase: true
-          caching:
-            enabled: true
-            override: true
-          platform:
-            os: Linux
-            arch: Amd64
-          runtime:
-            type: Cloud
-            spec: {}
-          execution:
-            steps:
-              - step:
-                  type: Run
-                  name: Run_1
-                  identifier: Run_1
-                  spec:
-                    shell: Sh
-                    command: echo Hello
-    - stage:
-        name: S4
-        identifier: S4
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    executionTarget: {}
-                    source:
-                      type: Inline
-                      spec:
-                        script: echo Hello
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-        tags: {}
   properties:
     ci:
       codebase:
-        connectorRef: account.Pankaj_Git
-        repoName: <+input>
+        connectorRef: Pankaj_Test_Git
+        repoName: harness-testing
         build: <+input>
-        sparseCheckout: []
