@@ -6,8 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: S1
-        identifier: S1
+        name: C1
+        identifier: C1
         description: ""
         type: CI
         spec:
@@ -30,11 +30,12 @@ pipeline:
                   name: Run_1
                   identifier: Run_1
                   spec:
+                    registryRef: <+input>
+                    image: <+input>
                     shell: Sh
                     command: echo Hello World
   properties:
     ci:
       codebase:
-        connectorRef: Pankaj_Test_Git
-        repoName: harness-testing
+        repoName: Harness-testing
         build: <+input>
