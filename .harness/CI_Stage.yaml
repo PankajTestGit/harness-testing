@@ -35,6 +35,6 @@ pipeline:
   properties:
     ci:
       codebase:
-        repoName: Harness-testing
+        repoName: harness-core-ui
         build: <+input>
         sparseCheckout: []
