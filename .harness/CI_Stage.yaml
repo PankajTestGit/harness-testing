@@ -6,8 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: C1
-        identifier: C1
+        name: S1
+        identifier: S1
         description: ""
         type: CI
         spec:
@@ -30,8 +30,6 @@ pipeline:
                   name: Run_1
                   identifier: Run_1
                   spec:
-                    registryRef: <+input>
-                    image: <+input>
                     shell: Sh
                     command: echo Hello World
   properties:
@@ -39,3 +37,4 @@ pipeline:
       codebase:
         repoName: Harness-testing
         build: <+input>
+        sparseCheckout: []
