@@ -1,0 +1,24 @@
+service:
+  name: service_kubernetes_2fa3
+  identifier: service_kubernetes_2fa3
+  tags: {}
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: deepak
+            spec:
+              store:
+                spec:
+                  connectorRef: org.Org_Pankaj_Test_Git
+                  repoName: Harness-test
+                  gitFetchType: Branch
+                  branch: main
+                  paths: <+input>
+                type: Github
+              optionalValuesYaml: false
+              enableDeclarativeRollback: false
+              skipResourceVersioning: false
+            type: K8sManifest
+      artifacts: {}
