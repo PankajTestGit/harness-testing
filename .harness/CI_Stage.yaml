@@ -46,7 +46,7 @@ pipeline:
       value: <+input>
     - name: openInNewTab
       type: String
-      description: Open in new tab [https://www.harness.io/](https://www.harness.io/){:target="_blank"}
+      description: Open in new tab [https://www.harness.io/](https://www.harness.io/)
       required: false
       value: <+input>
     - name: openInNewWindow
