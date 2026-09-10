@@ -41,16 +41,16 @@ pipeline:
   variables:
     - name: Test
       type: String
-      description: "Test [https://www.harness.io/](https://www.harness.io/)"
+      description: Test [https://www.harness.io/](https://www.harness.io/)
       required: false
       value: <+input>
     - name: openInNewTab
       type: String
-      description: "Open in new tab [https://www.harness.io/](https://www.harness.io/){:target=\"_blank\"}"
+      description: Open in new tab [https://www.harness.io/](https://www.harness.io/){:target="_blank"}
       required: false
       value: <+input>
     - name: openInNewWindow
       type: String
-      description: "Open in new window <a href=\"https://www.harness.io/\" target=\"_blank\" onclick=\"window.open('https://www.harness.io/','newWindow','width=800,height=600');return false;\">https://www.harness.io/</a>"
+      description: Open in new window <a href="https://www.harness.io/" target="_blank">https://www.harness.io/</a>
       required: false
       value: <+input>
