@@ -38,3 +38,9 @@ pipeline:
         repoName: Harness-testing
         build: <+input>
         sparseCheckout: []
+  variables:
+    - name: Test
+      type: String
+      description: Test https://www.harness.io/
+      required: false
+      value: <+input>
