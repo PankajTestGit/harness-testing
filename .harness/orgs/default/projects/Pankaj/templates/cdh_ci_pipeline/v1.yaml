@@ -9,7 +9,7 @@ template:
   spec:
     stages:
       - stage:
-          name: S1
+          name: SmokeTests
           identifier: S1
           description: ""
           type: Pipeline
@@ -34,3 +34,4 @@ template:
                                   type: Inline
                                   spec:
                                     script: <+input>
+          tags: {}
