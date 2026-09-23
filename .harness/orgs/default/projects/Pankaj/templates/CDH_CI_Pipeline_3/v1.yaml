@@ -1,0 +1,36 @@
+template:
+  name: CDH CI Pipeline 3
+  identifier: CDH_CI_Pipeline_3
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: SmokeTest
+          identifier: SmokeTest
+          description: ""
+          type: Pipeline
+          spec:
+            org: default
+            project: Pankaj
+            pipeline: SmokeTests
+            inputs:
+              identifier: SmokeTests
+              stages:
+                - stage:
+                    identifier: S1
+                    type: Custom
+                    spec:
+                      execution:
+                        steps:
+                          - step:
+                              identifier: ShellScript_1
+                              type: ShellScript
+                              spec:
+                                source:
+                                  type: Inline
+                                  spec:
+                                    script: <+input>
