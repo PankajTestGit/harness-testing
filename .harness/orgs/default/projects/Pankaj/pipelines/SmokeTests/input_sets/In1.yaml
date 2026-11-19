@@ -1,0 +1,22 @@
+inputSet:
+  name: In1
+  identifier: In1
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: SmokeTests
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo Hello Wold
